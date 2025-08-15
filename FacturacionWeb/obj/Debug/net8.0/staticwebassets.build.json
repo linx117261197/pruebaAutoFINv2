@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "pGDDTy8h73iwH0wIBMP1F+a0GRRDD+nzYeH5zQgUdzs=",
+  "Source": "FacturacionWeb",
+  "BasePath": "_content/FacturacionWeb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FacturacionWeb\\wwwroot",
+      "Source": "FacturacionWeb",
+      "ContentRoot": "C:\\Users\\Ricardo\\Documents\\proyectos .net\\FacturacionWeb\\FacturacionWeb\\wwwroot\\",
+      "BasePath": "_content/FacturacionWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

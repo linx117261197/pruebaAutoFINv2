@@ -1,0 +1,43 @@
+@model ReporteFacturacionViewModel
+@{
+    ViewData["Title"] = "Reporte de Facturación";
+}
+
+<div class="container">
+    <h2 class="text-center">Reporte de Facturación de la Agencia: Cresta del Valle</h2>
+    <hr />
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4><strong>Facturación Total:</strong> @Model.FacturacionTotal.ToString("C")</h4>
+            <h4><strong>Total de Productos Vendidos:</strong> @Model.TotalProductosVendidos</h4>
+        </div>
+        <div class="col-md-6 text-md-right">
+            <p><strong>Fecha de Impresión:</strong> @DateTime.Now.ToString("dd/MM/yyyy")</p>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Factura</th>
+                <th>Fecha de Facturación</th>
+                <th>Cliente</th>
+                <th>Productos</th>
+                <th>Monto Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Facturas)
+            {
+                <tr>
+                    <td>@item.NumeroFactura</td>
+                    <td>@item.FechaFacturacion.ToString("dd MMMM, yyyy h:mm tt")</td>
+                    <td>@item.Cliente</td>
+                    <td>@item.Productos</td>
+                    <td>@item.MontoTotal.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
